@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "21011:7777"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PLUTO_CODE=us_east,us_west,ca,uk
+    volumes:
+      - .:/app
