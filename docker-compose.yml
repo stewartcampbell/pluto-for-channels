@@ -10,3 +10,9 @@ services:
       - PLUTO_CODE=us_east,us_west,ca,uk
     volumes:
       - .:/app
+
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
